@@ -1,0 +1,15 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html{scroll-behavior:smooth}
+body{@apply bg-cream text-ink font-sans font-light antialiased}
+:focus-visible{outline:2px solid #a8854f;outline-offset:3px}
+@layer components{
+.h2{@apply font-serif text-4xl md:text-6xl font-light leading-[1.05]}
+.note{@apply font-serif italic text-xl text-gold}
+.btn{@apply inline-flex items-center justify-center gap-2 border px-7 py-3.5 text-xs uppercase tracking-[.2em] transition-all duration-500}
+.btn-gold{@apply btn border-gold bg-gold text-white hover:bg-transparent hover:text-gold}
+.btn-line{@apply btn border-white/70 text-white hover:bg-white hover:text-ink}
+.btn-dark{@apply btn border-ink text-ink hover:bg-ink hover:text-cream}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.fade-up{animation:fadeUp 1.4s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
